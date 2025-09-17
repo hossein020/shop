@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f254e; /* رنگ تیره مشابه تصویر */
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Tahoma', sans-serif;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .nav-link:hover {
+    background-color: #1b3a70; /* هایلایت هنگام هاور */
+  }
+  
+  .nav-link.home {
+    background-color: #007bff;
+    padding: 5px 15px;
+  }
+  
