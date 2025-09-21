@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import './Registration.css'
 
 export default function Registration() {
   const [form, setForm] = useState({
@@ -21,70 +23,59 @@ export default function Registration() {
     }
 
     console.log("ثبت نام موفق:", form);
-    // اینجا می‌تونی API صدا بزنی
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-2xl shadow-md w-96 space-y-4"
-      >
-        <h2 className="text-center text-xl font-bold">ثبت نام</h2>
+    <div className="registration-container">
+      <form onSubmit={handleSubmit} className="registration-form">
+        <h2>ثبت نام</h2>
 
+        <label>نام کاربری</label>
         <input
           type="text"
           name="username"
           placeholder="نام کاربری"
           value={form.username}
           onChange={handleChange}
-          className="w-full p-2 border rounded-lg"
         />
 
+        <label>ایمیل</label>
         <input
           type="email"
           name="email"
           placeholder="ایمیل"
           value={form.email}
           onChange={handleChange}
-          className="w-full p-2 border rounded-lg"
         />
 
+        <label>رمز عبور</label>
         <input
           type="password"
           name="password"
           placeholder="رمز عبور"
           value={form.password}
           onChange={handleChange}
-          className="w-full p-2 border rounded-lg"
         />
 
+        <label>تکرار رمز عبور</label>
         <input
           type="password"
           name="confirmPassword"
           placeholder="تکرار رمز عبور"
           value={form.confirmPassword}
           onChange={handleChange}
-          className="w-full p-2 border rounded-lg"
         />
 
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
-        >
-          ثبت نام
-        </button>
+        <button type="submit" className="btn-primary">ثبت نام</button>
 
-        <div className="text-center text-gray-500">یا ورود با</div>
+        <div className="divider">یا ورود با</div>
 
-        <button className="w-full bg-red-600 text-white py-2 rounded-lg flex justify-center">
-          ورود با گوگل
-        </button>
+        <button type="button" className="btn-google"><FaGoogle /> ورود با گوگل</button>
+        <button type="button" className="btn-github"><FaGithub /> ورود با گیت‌هاب</button>
 
-        <button className="w-full bg-gray-800 text-white py-2 rounded-lg flex justify-center">
-          ورود با گیت‌هاب
-        </button>
-        <dir>قبلا ثبت نام کردهاید؟<a href="#">وارد شوید</a></dir>
+        <div className="login-link">
+          قبلا ثبت‌نام کرده‌اید؟ <a href="#">وارد شوید</a>
+        </div>
       </form>
     </div>
   );

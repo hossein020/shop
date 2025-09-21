@@ -1,0 +1,58 @@
+.contact-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: sans-serif;
+  
+    direction: rtl;      /* متن‌ها و ورودی‌ها راست‌چین */
+    text-align: right;   /* تراز متن‌ها سمت راست */
+  }
+  
+  .form-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* عنوان وسط بماند */
+  }
+  
+  .contact-form label {
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 14px;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #0077ff;
+  }
+  
+  .contact-form button {
+    background-color: #0077ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #005fcc;
+  }
+  
